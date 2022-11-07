@@ -64,7 +64,9 @@ public class ItemController {
         model.addAttribute("item",item);
         return "item-view";
     }
-
+    
+    //이미지 출력부분 // db저장까지 하고 구현
+    
     @ResponseBody
     @GetMapping("/images/{filename}") //파일이름으로 저장된 풀패스를 가져와 urlresource 스트림으로 날려줌
     public Resource downloadImage(@PathVariable String filename) throws MalformedURLException {
